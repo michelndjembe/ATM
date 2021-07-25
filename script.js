@@ -191,8 +191,22 @@ function choose(inp) {
     }
 }
 
-function cancel() {
-    
+function cancel(a) {
+    if (a == 1) {
+        inputScreem1.value = '';
+    }
+
+    if (a == 2) {
+        inputScreem2.value = '';
+    }
+
+    if (a == 3) {
+        inputScreem3.value = '';
+    }
+
+    if (a == 4) {
+        inputScreem4.value = '';
+    }
 }
 
 
