@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <div class="container">
+        <form class="form" id='formal' action="">                <span>4588, 6464, 478999, 6000, 150, <br>98, 87400, 230, 78, 8700, 6800</span>
+            <div class="btn">
+                <button type="button" onclick="show = !show; togglebtn() ;assign()">average</button>
+                <button type="button"  onclick="show = !show; togglebtn(); ">All greater</button>                
+            </div>
+            <div id="average">
+                <label for="findex">First Items</label>
+                <input type="text" name="findex" id="findex">
+
+                <label for="sindex">Second Items</label>
+                <input type="text" name="sindex" id="sindex">
+                <br>
+            </div>
+            <div id="greater">
+                <label for="great">Choose your number</label>
+            </div>
+                <input id="question"/> 
+        </form>
+    </div> -->
+    <div class="atm d-flex container justify-content-center align-items-center" id="atm1">
+        <div class="atmApp d-flex justify-content-center align-items-center flex-column">
+            <span class="title">
+                <h2>
+                    Your ATM
+                </h2>
+            </span>
+            <div class="screemdiv">
+                <textarea name="screem" class="screem" id="screem1" disabled></textarea>
+            </div>
+            <input class="screem2 text-center" type="number" name="" id="inputScreem1" disabled>
+            <div class="d-flex justify-content-center align-items-center">
+                <div class="directions">
+                    <input class="direction" type="button" value="<-" onclick="scrolling(up)">
+                </div>
+                
+                <div class="btn d-flex justify-content-center align-items-center flex-column">
+                    <span class="row btn btnContaint d-flex justify-content-around">
+                        <input class="digit col-3" type="button" value="1" onclick="ecrire('1')">
+                        <input class="digit col-3" type="button" value="2" onclick="ecrire('2')">
+                        <input class="digit col-3" type="button" value="3" onclick="ecrire('3')">
+                    </span>
+                    <span class="row btn btnContaint d-flex justify-content-around">
+                        <input class="digit col-3" type="button" value="4" onclick="ecrire('4')">
+                        <input class="digit col-3" type="button" value="5" onclick="ecrire('5')">
+                        <input class="digit col-3" type="button" value="6" onclick="ecrire('6')">
+                    </span>
+                    <span class="row btn btnContaint d-flex justify-content-around">
+                        <input class="digit col-3" type="button" value="7" onclick="ecrire('7')">
+                        <input class="digit col-3" type="button" value="8" onclick="ecrire('8')">
+                        <input class="digit col-3" type="button" value="9" onclick="ecrire('9')">
+                    </span>
+                    <span class="row btn btnContaint d-flex justify-content-around" onclick="cancel('1')>
+                        <input class="col-4 btnOpt btn-danger" type="button" value="C">
+                        <input class="digit col-3" type="button" value="0" onclick="ecrire('0')">
+                        <input class="col-4 btnOpt btn-success" type="button" value="A" id="okay1" onclick="entres(1)">
+                    </span>
+                </div>
+                <div class="directions">
+                    <input class="direction" type="button" value="->" >
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="atm d-none container justify-content-center align-items-center" id="atm2">
+        <div class="atmApp d-flex justify-content-center align-items-center flex-column">
+            <span class="title">
+                <h2>
+                    Your ATM
+                </h2>
+            </span>
+            <div class="screemdiv">
+                <textarea name="screem" id="screem2" class="screem"></textarea>
+            </div>
+            <input class="screem2 text-center" type="number" name="" id="inputScreem2" disabled>
+            <div class="d-flex justify-content-center align-items-center">
+                <div class="directions">
+                    <input class="direction" type="button" value="<-" onclick="scrolling(up)">
+                </div>
+    
+                <div class="btn d-flex justify-content-center align-items-center flex-column">
+                    <span class="row btn btnContaint d-flex justify-content-around">
+                        <input class="col-3" type="button" value="1" onclick="inserer2(1)">
+                        <input class="col-3" type="button" value="2" onclick="inserer2(2)">
+                        <input class="col-3" type="button" value="3" onclick="inserer2(3)">
+                    </span>
+                    <span class="row btn btnContaint d-flex justify-content-around">
+                        <input class="col-3" type="button" value="4" onclick="inserer2(4)">
+                        <input class="col-3" type="button" value="5" onclick="inserer2(5)">
+                        <input class="col-3" type="button" value="6" onclick="inserer2(6)">
+                    </span>
+                    <span class="row btn btnContaint d-flex justify-content-around">
+                        <input class="col-3" type="button" value="7" onclick="inserer2(7)">
+                        <input class="col-3" type="button" value="8" onclick="inserer2(8)">
+                        <input class="col-3" type="button" value="9" onclick="inserer2(9)">
+                    </span>
+                    <span class="row btn btnContaint d-flex justify-content-around">
+                        <input class="col-4 btnOpt btn-danger" type="button" value="C" onclick="cancel(2)">
+                        <input class="col-3" type="button" value="0" onclick="inserer(0)">
+                        <input class="col-4 btnOpt btn-success" type="button" value="A" id="okay2" onclick="entres(1)">
+                    </span>
+                </div>
+                <div class="directions">
+                    <input class="direction" type="button" value="->">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="atm d-none container justify-content-center align-items-center" id="atm3">
+        <div class="atmApp d-flex justify-content-center align-items-center flex-column">
+            <span class="title">
+                <h2>
+                    Your ATM
+                </h2>
+            </span>
+            <div class="screemdiv">
+                <textarea name="screem" class="screem" id="screem3" disabled></textarea>
+            </div>
+            <input class="screem2 text-center" type="number" name="screem3" id="inputScreem3" disabled>
+            <div class="d-flex justify-content-center align-items-center">
+                <div class="directions">
+                    <input class="direction" type="button" value="<-" onclick="scrolling(up)">
+                </div>
+    
+                <div class="btn d-flex justify-content-center align-items-center flex-column">
+                    <span class="row btn btnContaint d-flex justify-content-around">
+                        <input class="col-3" type="button" value="1" onclick="inserer3(1)">
+                        <input class="col-3" type="button" value="2" onclick="inserer3(2)">
+                        <input class="col-3" type="button" value="3" onclick="inserer3(3)">
+                    </span>
+                    <span class="row btn btnContaint d-flex justify-content-around">
+                        <input class="col-3" type="button" value="4" onclick="inserer3(4)">
+                        <input class="col-3" type="button" value="5" onclick="inserer3(5)">
+                        <input class="col-3" type="button" value="6" onclick="inserer3(6)">
+                    </span>
+                    <span class="row btn btnContaint d-flex justify-content-around">
+                        <input class="col-3" type="button" value="7" onclick="inserer3(7)">
+                        <input class="col-3" type="button" value="8" onclick="inserer3(8)">
+                        <input class="col-3" type="button" value="9" onclick="inserer3(9)">
+                    </span>
+                    <span class="row btn btnContaint d-flex justify-content-around">
+                        <input class="col-4 btnOpt btn-danger" type="button" value="C">
+                        <input class="col-3" type="button" value="0" onclick="inserer3(0)">
+                        <input class="d-block col-4 btnOpt btn-success" type="button" value="A" id="okay31" onclick="entres(1)">
+                        <input class="d-none col-4 btnOpt btn-success" type="button" value="A2" id="okay32" onclick="entres(1)">
+                    </span>
+                </div>
+                <div class="directions">
+                    <input class="direction" type="button" value="->">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="atm d-none container justify-content-center align-items-center" id="atm4">
+        <div class="atmApp d-flex justify-content-center align-items-center flex-column">
+            <span class="title">
+                <h2>
+                    Your ATM
+                </h2>
+            </span>
+            <div class="screemdiv">
+                <textarea name="screem" id="screem4" class="screem" disabled></textarea>
+            </div>
+            <input class="screem2 text-center" type="number" name="" id="inputScreem4" disabled>
+            <div class="d-flex justify-content-center align-items-center">
+                <div class="directions">
+                    <input class="direction" type="button" value="<-" onclick="scrolling(up)">
+                </div>
+    
+                <div class="btn d-flex justify-content-center align-items-center flex-column">
+                    <span class="row btn btnContaint d-flex justify-content-around">
+                        <input class="col-3" type="button" value="1" onclick="inserer4(1)">
+                        <input class="col-3" type="button" value="2" onclick="inserer4(2)">
+                        <input class="col-3" type="button" value="3" onclick="inserer4(3)">
+                    </span>
+                    <span class="row btn btnContaint d-flex justify-content-around">
+                        <input class="col-3" type="button" value="4" onclick="inserer4(4)">
+                        <input class="col-3" type="button" value="5" onclick="inserer4(5)">
+                        <input class="col-3" type="button" value="6" onclick="inserer4(6)">
+                    </span>
+                    <span class="row btn btnContaint d-flex justify-content-around">
+                        <input class="col-3" type="button" value="7" onclick="inserer4(7)">
+                        <input class="col-3" type="button" value="8" onclick="inserer4(8)">
+                        <input class="col-3" type="button" value="9" onclick="inserer4(9)">
+                    </span>
+                    <span class="row btn btnContaint d-flex justify-content-around">
+                        <input class="col-4 btnOpt btn-danger" type="button" value="C">
+                        <input class="col-3" type="button" value="0" onclick="inserer4(0)">
+                        <input class="d-block col-4 btnOpt btn-success" type="button" value="A" id="okay41" onclick="entres(1)">
+                    </span>
+                </div>
+                <div class="directions">
+                    <input class="direction" type="button" value="->">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>
