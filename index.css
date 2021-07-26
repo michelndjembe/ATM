@@ -35,7 +35,7 @@ input{
 
 
 h2{
-    font-family: fantasy;
+    font-family: fantasy, poppins, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin: 5px;
     color: white;
 }
